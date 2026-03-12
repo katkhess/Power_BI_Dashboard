@@ -1,45 +1,34 @@
-# Data Jobs Dashboard with Power BI
+# Power_BI_Dashboard
 
-![Dashboard Page 1](/Images/P1_Page1.png) 
+> **Note:** This content belongs in the [PowerBI_Data_Analytics_Course](https://github.com/katkhess/PowerBI_Data_Analytics_Course) repository. This standalone repo was created by mistake. Follow the steps below to move it there.
 
-## Introduction
-This dashboard was created for **Job Seekers, Job Transitioners and Job Swappers** to solve a common problem: information about the data job market is scattered and hard to grasp. Using a *real world [...]  
+## How to add this project to PowerBI_Data_Analytics_Course
 
-## Skills Showcased
+Run these commands to copy the `Power_BI_Dashboard/` folder directly into your course repo:
 
-- **Data Transformation (ETL) with Power Query:**
-Cleaned, shaped and prepared the raw data for analysis by handlingblanks, changing data types and creating new columns.
-- **Implicit Measures:**
-Formulated measures to derive key insights and KPIs like 'Median Yearly Salary' and 'Job Count'. 
-- **Core Charts:**
-Utilized **Column, Bar, Line,** and **Area Charts** to compare job counts and track trends over time.
-- **Geospatial Analysis:**
-Leveraged **Map Charts** to visualize the global distribution of jobs.
-- **KPI Indicators & Tables:** 
-Used **Cards** to display key metrics and **Tables** to provide granular, sortable data.
-- **Dashboard Design:** Designed an intuitive and visually appealing layout, exploring both common and uncommon chart types to best tell the data story.
-- **Interactive Reportingh:**
-  - **Slicers:** 
-       To dynamically filter the report by Job Title.
-  - **Buttons & Bookmarks:**
-       To create a seamless navigation experrience.
-  - **Drill-Through:** 
-        To navigate from a high-level summary to a contextual, detailed view.
+```bash
+# Clone both repos (if you haven't already)
+git clone https://github.com/katkhess/PowerBI_Data_Analytics_Course.git
+git clone https://github.com/katkhess/Power_BI_Dashboard.git
 
-## Dashboard Overview
+# Copy the project folder into the course repo
+cp -r Power_BI_Dashboard/Power_BI_Dashboard PowerBI_Data_Analytics_Course/Power_BI_Dashboard
 
-### Page 1: High-Level Market View
+# Commit and push
+cd PowerBI_Data_Analytics_Course
+git add Power_BI_Dashboard/
+git commit -m "Add Power_BI_Dashboard project"
+git push
+```
 
-![Dashboard Page 1](/Images/P1_Page1.png) 
+After that, the `Power_BI_Dashboard/` folder will be part of `PowerBI_Data_Analytics_Course` alongside any future projects.
 
-This is mission control for the data job market. It showcases key KPIs like total job count, median salaries and top job titles to give you a quick understanding of what's happening in the job market [...]  
+---
 
-### Page 2: Job Title Drill Through
+## Project Contents
 
-![Dashboard Page 2](/Images/P1_Page2.png) 
-
-This is the deep-dive page. From the main dashboard, you can drill throught to this view to get specific details for a single job title, including salary ranges, work-from-home stats, top hiring platf[...]  
-
-## Conclusion
-
-This dashboard showcases howe Power BI can transform raw job posting data into a pwoerful tool for career analysis. it allows users to slice, filter and drill through data to make informed decisions a[...]
+| File / Folder | Description |
+|---------------|-------------|
+| [`Power_BI_Dashboard/Data_Jobs_Dashboard.pbix`](./Power_BI_Dashboard/Data_Jobs_Dashboard.pbix) | Power BI report file |
+| [`Power_BI_Dashboard/Images/`](./Power_BI_Dashboard/Images/) | Dashboard screenshots |
+| [`Power_BI_Dashboard/README.md`](./Power_BI_Dashboard/README.md) | Project documentation |
