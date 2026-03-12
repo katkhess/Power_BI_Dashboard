@@ -2,20 +2,47 @@
 
 > **Note:** This content belongs in the [PowerBI_Data_Analytics_Course](https://github.com/katkhess/PowerBI_Data_Analytics_Course) repository. This standalone repo was created by mistake. Follow the steps below to move it there.
 
-## How to add this project to PowerBI_Data_Analytics_Course
+## Moving this project into your PowerBI_Data_Analytics_Course codespace
 
-Run these commands to copy the `Power_BI_Dashboard/` folder directly into your course repo:
+### Option A — One-command script (recommended)
+
+A ready-made script [`migrate.sh`](./migrate.sh) handles everything automatically.
+
+**Inside your `PowerBI_Data_Analytics_Course` codespace terminal, run:**
 
 ```bash
-# Clone both repos (if you haven't already)
-git clone https://github.com/katkhess/PowerBI_Data_Analytics_Course.git
-git clone https://github.com/katkhess/Power_BI_Dashboard.git
+# Download the script, review it, then execute it
+curl -fsSL https://raw.githubusercontent.com/katkhess/Power_BI_Dashboard/main/migrate.sh -o migrate.sh
+cat migrate.sh   # review before running
+bash migrate.sh
+```
 
-# Copy the project folder into the course repo
-cp -r Power_BI_Dashboard/Power_BI_Dashboard PowerBI_Data_Analytics_Course/Power_BI_Dashboard
+The script will:
+1. Detect that you are already inside the course repo.
+2. Download the `Power_BI_Dashboard/` folder from this repo into your codespace.
+3. Stage the new files with `git add`.
 
-# Commit and push
-cd PowerBI_Data_Analytics_Course
+Then commit and push:
+
+```bash
+git commit -m "Add Power_BI_Dashboard project"
+git push
+```
+
+---
+
+### Option B — Manual steps
+
+If you prefer to do it by hand, run these commands **inside your `PowerBI_Data_Analytics_Course` codespace terminal**:
+
+```bash
+# 1. Clone the dashboard repo into a temp folder
+git clone --depth 1 https://github.com/katkhess/Power_BI_Dashboard.git /tmp/pbi_dashboard
+
+# 2. Copy the project folder into the course repo
+cp -r /tmp/pbi_dashboard/Power_BI_Dashboard ./Power_BI_Dashboard
+
+# 3. Stage, commit and push
 git add Power_BI_Dashboard/
 git commit -m "Add Power_BI_Dashboard project"
 git push
